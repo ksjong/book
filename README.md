@@ -18,7 +18,7 @@
    ![pub_sub_3](https://github.com/ksjong/book/assets/142961606/1ad4a0d7-7a77-4534-b145-4c795023c464)
 
 
-4. ompensation / Correlation
+4. compensation / Correlation
    
    ![delete](https://github.com/ksjong/book/assets/142961606/a7928d18-94ec-4f6c-aca5-4e7f177050dd)
    ![delete2](https://github.com/ksjong/book/assets/142961606/b22a5f41-47d6-4649-848d-bdb389e565d8)
