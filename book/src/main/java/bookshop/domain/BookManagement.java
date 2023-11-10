@@ -18,11 +18,8 @@ public class BookManagement {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-
     private String bookName;
-
     private String bookimg;
-
     private Integer stock;
 
     @PostUpdate
@@ -43,88 +40,27 @@ public class BookManagement {
 
     //<<< Clean Arch / Port Method
     public static void decreaseStock(DeliveryStarted deliveryStarted) {
-        //implement business logic here:
-
-        /** Example 1:  new item 
-        BookManagement bookManagement = new BookManagement();
-        repository().save(bookManagement);
-
-        StockDecreased stockDecreased = new StockDecreased(bookManagement);
-        stockDecreased.publishAfterCommit();
-        StockDecreased stockDecreased = new StockDecreased(bookManagement);
-        stockDecreased.publishAfterCommit();
-        */
-
-        /** Example 2:  finding and process
-        
-        repository().findById(deliveryStarted.get???()).ifPresent(bookManagement->{
-            
-            bookManagement // do something
-            repository().save(bookManagement);
-
-            StockDecreased stockDecreased = new StockDecreased(bookManagement);
-            stockDecreased.publishAfterCommit();
-            StockDecreased stockDecreased = new StockDecreased(bookManagement);
-            stockDecreased.publishAfterCommit();
-
+        repository().findById(deliveryStarted.getBookId()).ifPresent(BookManagement->{
+            BookManagement.setStock(BookManagement.getStock() - deliveryStarted.getQty());
+            repository().save(BookManagement);
          });
-        */
 
     }
 
     //>>> Clean Arch / Port Method
     //<<< Clean Arch / Port Method
     public static void increaseStock(DeliveryReturned deliveryReturned) {
-        //implement business logic here:
 
-        /** Example 1:  new item 
-        BookManagement bookManagement = new BookManagement();
-        repository().save(bookManagement);
-
-        StockIncreased stockIncreased = new StockIncreased(bookManagement);
-        stockIncreased.publishAfterCommit();
-        */
-
-        /** Example 2:  finding and process
-        
-        repository().findById(deliveryReturned.get???()).ifPresent(bookManagement->{
-            
-            bookManagement // do something
-            repository().save(bookManagement);
-
-            StockIncreased stockIncreased = new StockIncreased(bookManagement);
-            stockIncreased.publishAfterCommit();
-
-         });
-        */
 
     }
 
     //>>> Clean Arch / Port Method
     //<<< Clean Arch / Port Method
     public static void increaseStock(DeliveryCancelled deliveryCancelled) {
-        //implement business logic here:
-
-        /** Example 1:  new item 
-        BookManagement bookManagement = new BookManagement();
-        repository().save(bookManagement);
-
-        StockIncreased stockIncreased = new StockIncreased(bookManagement);
-        stockIncreased.publishAfterCommit();
-        */
-
-        /** Example 2:  finding and process
-        
-        repository().findById(deliveryCancelled.get???()).ifPresent(bookManagement->{
-            
-            bookManagement // do something
-            repository().save(bookManagement);
-
-            StockIncreased stockIncreased = new StockIncreased(bookManagement);
-            stockIncreased.publishAfterCommit();
-
+        repository().findById(deliveryCancelled.getBookId()).ifPresent(BookManagement->{
+            BookManagement.setStock(BookManagement.getStock() + deliveryCancelled.getQty());
+            repository().save(BookManagement);
          });
-        */
 
     }
     //>>> Clean Arch / Port Method

@@ -13,7 +13,7 @@ import lombok.Data;
 public class Mybookuser {
 
     @Id
-    //@GeneratedValue(strategy=GenerationType.AUTO)
+    @GeneratedValue(strategy=GenerationType.AUTO)
     private Long id;
 
     private String userId;
