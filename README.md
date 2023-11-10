@@ -18,11 +18,13 @@
    ![pub_sub_3](https://github.com/ksjong/book/assets/142961606/1ad4a0d7-7a77-4534-b145-4c795023c464)
 
 
-4. ompensation / Correlation 
+4. ompensation / Correlation
+   
    ![delete](https://github.com/ksjong/book/assets/142961606/a7928d18-94ec-4f6c-aca5-4e7f177050dd)
    ![delete2](https://github.com/ksjong/book/assets/142961606/b22a5f41-47d6-4649-848d-bdb389e565d8)
 
 5. CQRS
+   
    ![7](https://github.com/ksjong/book/assets/142961606/af2a0b01-8262-4314-9556-988fed4e0542)
    ![cqrs1](https://github.com/ksjong/book/assets/142961606/779ca881-2cb2-43ec-a7de-e67ffda32b2a)
    ![cqrs2](https://github.com/ksjong/book/assets/142961606/a9c644eb-3ef6-443d-b899-a6d03fca0bc3)
